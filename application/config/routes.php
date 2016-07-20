@@ -1,0 +1,103 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| URI ROUTING
+| -------------------------------------------------------------------------
+| This file lets you re-map URI requests to specific controller functions.
+|
+| Typically there is a one-to-one relationship between a URL string
+| and its corresponding controller class/method. The segments in a
+| URL normally follow this pattern:
+|
+|	example.com/class/method/id/
+|
+| In some instances, however, you may want to remap this relationship
+| so that a different class/function is called than the one
+| corresponding to the URL.
+|
+| Please see the user guide for complete details:
+|
+|	https://codeigniter.com/user_guide/general/routing.html
+|
+| -------------------------------------------------------------------------
+| RESERVED ROUTES
+| -------------------------------------------------------------------------
+|
+| There are three reserved routes:
+|
+|	$route['default_controller'] = 'welcome';
+|
+| This route indicates which controller class should be loaded if the
+| URI contains no data. In the above example, the "welcome" class
+| would be loaded.
+|
+|	$route['404_override'] = 'errors/page_missing';
+|
+| This route will tell the Router which controller/method to use if those
+| provided in the URL cannot be matched to a valid route.
+|
+|	$route['translate_uri_dashes'] = FALSE;
+|
+| This is not exactly a route, but allows you to automatically route
+| controller and method names that contain dashes. '-' isn't a valid
+| class or method name character, so it requires translation.
+| When you set this option to TRUE, it will replace ALL dashes in the
+| controller and method URI segments.
+|
+| Examples:	my-controller/index	-> my_controller/index
+|		my-controller/my-method	-> my_controller/my_method
+*/
+$route['default_controller'] = 'Home';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
+//frontend
+
+$route['berita'] = 'Home/berita';
+$route['beritadetail/(:num)/(:any)'] = 'Home/beritadetail/$1/$2';
+$route['foto'] = 'Home/foto';
+$route['fotodetail/(:num)/(:any)'] = 'Home/fotodetail/$1/$2';
+$route['contact'] = 'Home/contact';
+$route['jadwal'] = 'Home/jadwal';
+$route['profilemasjid'] = 'Home/profilemasjid';
+$route['profiledkm'] = 'Home/profiledkm';
+$route['video'] = 'Home/video';
+$route['keuangan'] = 'Home/keuangan';
+$route['kegiatan'] = 'Home/kegiatan';
+
+//backend
+$route['dashboard'] = 'backend/dashboard';
+$route['tambahberita'] = 'backend/tambahberita';
+$route['daftarfoto'] = 'backend/daftarfoto';
+$route['tambahfoto'] = 'backend/tambahfoto';
+$route['daftarvideo'] = 'backend/daftarvideo';
+$route['tambahvideo'] = 'backend/tambahvideo';
+$route['login'] = 'backend/login';
+$route['loginprocess'] = 'backend/loginprocess';
+$route['ubahartikelprocess'] = 'backend/ubahartikelprocess';
+$route['ubahfotoprocess'] = 'backend/ubahfotoprocess';
+$route['ubahvideoprocess'] = 'backend/ubahvideoprocess';
+$route['daftarkeuangan'] = 'backend/daftarkeuangan';
+$route['tambahkeuangan'] = 'backend/tambahkeuangan';
+$route['ubahkeuanganprocess'] = 'backend/ubahkeuanganprocess';
+$route['daftarkegiatan'] = 'backend/daftarkegiatan';
+$route['tambahkegiatan'] = 'backend/tambahkegiatan';
+$route['ubahkegiatanprocess'] = 'backend/ubahkegiatanprocess';
+$route['daftarjadwal'] = 'backend/daftarjadwal';
+$route['tambahjadwal'] = 'backend/tambahjadwal';
+$route['ubahjadwalprocess'] = 'backend/ubahjadwalprocess';
+$route['daftarpengurus'] = 'backend/daftarpengurus';
+$route['tambahpengurus'] = 'backend/tambahpengurus';
+$route['ubahkepengurusanprocess'] = 'backend/ubahkepengurusanprocess';
+$route['daftarmasjid'] = 'backend/daftarmasjid';
+$route['tambahmasjid'] = 'backend/tambahmasjid';
+$route['ubahmasjidprocess'] = 'backend/ubahmasjidprocess';
+$route['daftarcontact'] = 'backend/daftarcontact';
+$route['tambahcontact'] = 'backend/tambahcontact';
+$route['ubahcontactprocess'] = 'backend/ubahcontactprocess';
+$route['daftarslide'] = 'backend/daftarslide';
+$route['tambahslide'] = 'backend/tambahslide';
+$route['ubahslideprocess'] = 'backend/ubahslideprocess';
+$route['logout'] = 'backend/logout';
