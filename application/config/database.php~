@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'masjid',
+	'hostname' => 'mysql.idhostinger.com',
+	'username' => 'u340911769_lisa',
+	'password' => 'lisa12345',
+	'database' => 'u340911769_lisa',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
